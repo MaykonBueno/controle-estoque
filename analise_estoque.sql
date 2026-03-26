@@ -41,25 +41,6 @@ from produtos p
 left join saidas s on s.id_produto = p.id_produto
 where s.id_produto IS NULL;
 
--- Total vendido por produto 
-select
-p.nome,
-sum(s.quantidade*p.preco) as total_vendido
-from produtos p
-join saidas s on s.id_produto = p.id_produto
-group by p.nome
-order by total_vendido DESC;
-
-
--- Quantidade total de entradas  por produto
-select
-p.nome,
-sum(e.quantidade) as total_entrada
-from produtos p
-join entradas e on e.id_produto = p.id_produto
-group by p.nome
-order by total_entrada DESC;
-
 
 --Diferença entre entrada e saida
 select
@@ -84,12 +65,3 @@ p.nome as produto_reposição,
 p.estoque_minimo
 from produtos p
 where p.estoque < p.estoque_minimo;
-
-
--- Produto com maior valor em estoque 
-select
-p.nome,
-(p.preco * p.estoque) as valor
-from produtos p
-order by valor desc
-limit 1;
