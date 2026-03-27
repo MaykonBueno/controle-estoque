@@ -38,7 +38,7 @@ O projeto inclui a criação de um dashboard no Power BI com as seguintes métri
 - Controle de entradas e saídas
 - Alertas de reposição
 
-<img src="https://github.com/MaykonBueno/controle-estoque/issues/1">
+<img width="889" height="499" alt="Image" src="https://github.com/user-attachments/assets/0671fbd8-2eaa-498c-af2f-aad33bee0792" />
 
 ---
 
